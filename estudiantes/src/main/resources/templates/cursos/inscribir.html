@@ -11,12 +11,12 @@
 <table border="1">
     <tr>
         <th>Nombre</th>
-        <th>Email</th>
+        <th>Correo</th>
         <th>Acción</th>
     </tr>
     <tr th:each="e : ${curso.estudiantes}">
         <td th:text="${e.nombre}"></td>
-        <td th:text="${e.email}"></td>
+        <td th:text="${e.correo}"></td>
         <td>
             <form th:action="@{/cursos/{cid}/desinscribir/{eid}(cid=${curso.id},eid=${e.id})}"
                   method="post">
@@ -30,12 +30,12 @@
 <table border="1">
     <tr>
         <th>Nombre</th>
-        <th>Email</th>
+        <th>Correo</th>
         <th>Acción</th>
     </tr>
     <tr th:each="e : ${estudiantes}">
         <td th:text="${e.nombre}"></td>
-        <td th:text="${e.email}"></td>
+        <td th:text="${e.correo}"></td>
         <td>
             <form th:action="@{/cursos/{cid}/inscribir/{eid}(cid=${curso.id},eid=${e.id})}"
                   method="post">
